@@ -1,5 +1,6 @@
 import Button from "./components/Button";
 import Card from "./components/Card";
+import ThemeToggle from "./components/ThemeToggle";
 
 function App() {
   return (
@@ -11,7 +12,16 @@ function App() {
         margin: "0 auto",
       }}
     >
-      <h1>Mirinda's Design System</h1>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
+        <h1 style={{ margin: 0 }}>Mirinda's Design System</h1>
+        <ThemeToggle />
+      </div>
       <p>A living library of reusable components, built with React and TypeScript.</p>
 
       <h2 style={{ marginTop: "var(--space-lg)" }}>Buttons</h2>

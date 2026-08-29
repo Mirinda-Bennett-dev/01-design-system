@@ -1,8 +1,10 @@
 :root {
-  /* 1. COLORS */
+  /* 1. COLORS (Light Theme) */
   --color-primary: #2563eb;
   --color-text: #1f2937;
+  --color-text-muted: #475569;
   --color-bg: #f8fafc;
+  --color-surface: #ffffff;
 
   /* 2. SPACING (The Design Math) */
   --space-sm: 8px;
@@ -11,6 +13,14 @@
 
   /* 3. TYPOGRAPHY */
   --font-main: system-ui, -apple-system, sans-serif;
+}
+
+/* Dark Theme: same labels, new paint */
+[data-theme="dark"] {
+  --color-text: #f1f5f9;
+  --color-text-muted: #94a3b8;
+  --color-bg: #0f172a;
+  --color-surface: #1e293b;
 }
 
 body {
