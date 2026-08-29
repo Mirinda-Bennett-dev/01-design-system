@@ -1,5 +1,7 @@
+import Badge from "./components/Badge";
 import Button from "./components/Button";
 import Card from "./components/Card";
+import Input from "./components/Input";
 import ThemeToggle from "./components/ThemeToggle";
 
 function App() {
@@ -40,6 +42,19 @@ function App() {
           title="Consistent"
           text="Every card shares the same spacing, rounded corners, and shadow from our design tokens."
         />
+      </div>
+
+      <h2 style={{ marginTop: "var(--space-lg)" }}>Inputs</h2>
+      <div style={{ display: "flex", gap: "var(--space-md)", flexWrap: "wrap" }}>
+        <Input label="Email address" placeholder="you@example.com" />
+        <Input label="Company" placeholder="Acme Inc." />
+      </div>
+
+      <h2 style={{ marginTop: "var(--space-lg)" }}>Badges</h2>
+      <div style={{ display: "flex", gap: "var(--space-sm)", flexWrap: "wrap" }}>
+        <Badge label="Stable" tone="green" />
+        <Badge label="Beta" tone="amber" />
+        <Badge label="New" tone="blue" />
       </div>
     </div>
   );
