@@ -1,13 +1,35 @@
 import Button from "./components/Button";
+import Card from "./components/Card";
 
 function App() {
   return (
-    <div style={{ padding: "40px", fontFamily: "var(--font-main)" }}>
+    <div
+      style={{
+        padding: "var(--space-lg)",
+        fontFamily: "var(--font-main)",
+        maxWidth: "960px",
+        margin: "0 auto",
+      }}
+    >
       <h1>Mirinda's Design System</h1>
-      <p>One component file, powering every button on the page.</p>
-      <div style={{ display: "flex", gap: "16px", marginTop: "24px" }}>
+      <p>A living library of reusable components, built with React and TypeScript.</p>
+
+      <h2 style={{ marginTop: "var(--space-lg)" }}>Buttons</h2>
+      <div style={{ display: "flex", gap: "var(--space-md)", flexWrap: "wrap" }}>
         <Button label="Primary Button" />
         <Button label="Secondary Button" variant="secondary" />
+      </div>
+
+      <h2 style={{ marginTop: "var(--space-lg)" }}>Cards</h2>
+      <div style={{ display: "flex", gap: "var(--space-md)", flexWrap: "wrap" }}>
+        <Card
+          title="Reusable"
+          text="One Card component renders every card on this page, just by changing its instructions."
+        />
+        <Card
+          title="Consistent"
+          text="Every card shares the same spacing, rounded corners, and shadow from our design tokens."
+        />
       </div>
     </div>
   );
